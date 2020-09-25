@@ -1,0 +1,17 @@
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+      manager: oc
+      operation: Update
+      time: "2020-09-25T13:28:35Z"
+    name: quotesapi
+    namespace: redhatandywen-quotes-dev
+  spec:
+    lookupPolicy:
+      local: false
+

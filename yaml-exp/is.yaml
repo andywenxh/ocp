@@ -1,0 +1,86 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: "2020-09-25T13:28:35Z"
+    generation: 1
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+    managedFields:
+    - apiVersion: image.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/generated-by: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+      manager: oc
+      operation: Update
+      time: "2020-09-25T13:28:35Z"
+    name: quotesapi
+    namespace: redhatandywen-quotes-dev
+    resourceVersion: "18251006"
+    selfLink: /apis/image.openshift.io/v1/namespaces/redhatandywen-quotes-dev/imagestreams/quotesapi
+    uid: 59fb7e8c-bc8c-4cee-8084-477b968bd457
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/redhatandywen-quotes-dev/quotesapi
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.na45.prod.nextcle.com/redhatandywen-quotes-dev/quotesapi
+    tags:
+    - items:
+      - created: "2020-09-25T13:29:13Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/redhatandywen-quotes-dev/quotesapi@sha256:b61a367f3f803c0d3a778b89f205de0fb581a15c4df669e019caf9d4fdcc7109
+        generation: 1
+        image: sha256:b61a367f3f803c0d3a778b89f205de0fb581a15c4df669e019caf9d4fdcc7109
+      tag: latest
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: "2020-09-25T13:28:23Z"
+    creationTimestamp: "2020-09-25T13:28:22Z"
+    generation: 2
+    name: quotesdb
+    namespace: redhatandywen-quotes-dev
+    resourceVersion: "18250400"
+    selfLink: /apis/image.openshift.io/v1/namespaces/redhatandywen-quotes-dev/imagestreams/quotesdb
+    uid: 01989c61-1eca-471f-8e4f-4b7cb6525325
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: image-registry.openshift-image-registry.svc:5000/openshift/mysql:5.7
+      generation: 2
+      importPolicy: {}
+      name: "5.7"
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/redhatandywen-quotes-dev/quotesdb
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.na45.prod.nextcle.com/redhatandywen-quotes-dev/quotesdb
+    tags:
+    - items:
+      - created: "2020-09-25T13:28:23Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+        generation: 2
+        image: sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+      tag: "5.7"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
